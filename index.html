@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Madhushree.B.M</div>
+
+        <ul class="nav-menu">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+     <!-- HOME SECTION -->
+    <section id="home" class="home-section">
+        <div class="home-left">
+
+            <span class="tag">👋 HI THERE!</span>
+
+            <h1>I’m <span class="green">Madhushree</span><br>Technology Enthusiast</h1>
+
+            <p class="desc">
+                Curious about how software works and excited to explore different areas of development,
+                Dedicated to Continuous learning and building meaningful projects.
+            </p>
+
+            <div class="buttons">
+    <!-- Hire Me scrolls to contact -->
+    <button class="hire-btn pulse" onclick="scrollToContact()">Hire Me</button>
+    <!-- Download CV -->
+    <a href="Madhushree_BM_Resume.pdf" target="_blank">
+    <button class="cv-btn">Download Resume</button>
+</a>
+
+</div>
+
+
+            <!-- SOCIAL ICONS -->
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/madhushree-b-m-42117b314" target="_blank">
+                    <img src="linkedin.jpg" class="icon">
+                </a>
+
+                <a href="https://github.com/MADHUSHREEBM" target="_blank">
+                    <img src="github.jpg" class="icon">
+                </a>
+
+                <a href="https://www.instagram.com/madhushree_bm_23" target="_blank">
+                    <img src="insta.jpg" class="icon">
+                </a>
+            </div>
+
+        </div>
+
+        <div class="home-right">
+            <div class="image-box">
+                <img src="WhatsApp Image 2025-12-10 at 7.06.34 AM.jpeg" class="show">
+                <img src="WhatsApp Image 2025-12-10 at 7.08.24 AM.jpeg">
+            </div>
+        </div>
+    </section>
+
+    <!-- OTHER SECTIONS -->
+   <section id="about" class="about-section">
+  <h1 class="about-title">About <span>Me</span></h1>
+  <p class="about-subtitle">Curious by nature, growing through code and learning.</p>
+
+  <div class="about-content">
+
+    <!-- LEFT: long description -->
+    <div class="about-left">
+      <h2>Passionate About Coding & Innovation</h2>
+      <p>
+        I am <strong>Madhushree B M</strong>, someone who believes in learning continuously and improving a little every day. My journey is shaped by curiosity, determination, and the desire to create a better future. I enjoy exploring new skills, taking on challenges, and developing myself both personally and professionally.
+      </p>
+      <p>
+        I come from a background that taught me the value of hard work, consistency, and staying grounded. Every step big or small has shaped who I am today. I believe in building a life with balance, kindness, and clarity. My focus is on steady progress and becoming a person who inspires through actions rather than words.
+      </p>
+      <p>
+        I aim to grow not only in my career but also as an individual learning from experiences and building a future I can be proud of.
+      </p>
+      <p class="goal-text">
+        <strong>My ultimate goal?</strong>  
+        To create a life where my family feels proud, secure, and surrounded by peace. I dream of building a future that is calm, sustainable, and full of positivity. This vision pushes me forward every day and motivates me to keep learning, improving, and giving my best in everything I do.
+      </p>
+    </div>
+
+    <!-- RIGHT: cards -->
+    <div class="about-right">
+      <!-- Education card -->
+      <div class="about-card" onclick="openTimeline()" role="button" tabindex="0">
+        <div class="card-left-accent"></div>
+        <div class="card-body">
+          <div class="icon">🎓</div>
+          <div class="card-text">
+            <h3>Education</h3>
+            <p class="muted">School → PUC → Engineering</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Publications & Patent -->
+      <div class="about-card" onclick="openPublication()" role="button" tabindex="0">
+        <div class="card-left-accent"></div>
+        <div class="card-body">
+          <div class="icon">📚</div>
+          <div class="card-text">
+            <h3>Research Publications</h3>
+            <p class="muted">1 Research Paper Publication</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="about-card" onclick="openCertification()" role="button" tabindex="0">
+        <div class="card-left-accent"></div>
+        <div class="card-body">
+          <div class="icon">📜</div>
+          <div class="card-text">
+            <h3>Certifications</h3>
+<p class="muted">
+    • Java Programming – NPTEL <br>
+    • Accenture Simulation <br>
+    • Tata Quiz <br>
+    • Oracle AI <br>
+</p>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Internships & Training -->
+      <div class="about-card" onclick="openInternship()" role="button" tabindex="0">
+        <div class="card-left-accent"></div>
+        <div class="card-body">
+          <div class="icon">💼</div>
+          <div class="card-text">
+            <h3>Internships & Training</h3>
+            <p class="muted">Project-based training</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Current Education textbox -->
+      <div class="current-edu">
+        <p><strong>Current Education:</strong> Final Year CSE student at BGS Institute of Technology.
+Currently focusing on projects, internships, and sharpening placement skills.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- POPUPS -->
+
+<!-- Education -->
+<div id="timeline-popup" class="timeline-popup">
+  <div class="timeline-content">
+    <span class="close-btn" onclick="closeTimeline()">&times;</span>
+    <h2>Education Timeline</h2>
+    <button class="scroll-btn left" onclick="scrollLeft('timeline-cards-edu')">&#10094;</button>
+    <div id="timeline-cards-edu" class="timeline-cards">
+      <div class="timeline-card">
+        <img src="WhatsApp Image 2025-12-11 at 4.39.45 PM.jpeg" alt="School">
+        <div class="timeline-info">
+          <h3>Primary Education</h3>
+          <p>→ Sri Adichunchanagiri Higher Primary School,BG Nagara(1st-5th)</p>
+
+          <p>→ Kitturu Rani Chennamma Residential School,Chikkonahallipura(6th-10th)</p>
+
+        </div>
+      </div>
+      <div class="timeline-card">
+        <img src="pu.jpeg" alt="PUC">
+        <div class="timeline-info">
+          <h3>PUC</h3>
+          <p>BGS PU College</p>
+          <p>Completed 11th & 12th with focus on science subjects(PCMB)</p>
+        </div>
+      </div>
+      <div class="timeline-card">
+        <img src="WhatsApp Image 2025-12-11 at 4.30.56 PM.jpeg" alt="Engineering">
+        <div class="timeline-info">
+          <h3>Engineering</h3>
+          <p>BGS Institute of Technology,BG Nagara</p>
+          <p>Pursuing Computer Science & Engineering.</p>
+        </div>
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('timeline-cards-edu')">&#10095;</button>
+  </div>
+</div>
+
+<!-- Internships -->
+<div id="internship-popup" class="timeline-popup">
+  <div class="timeline-content">
+    <span class="close-btn" onclick="closeInternship()">&times;</span>
+    <h2>Internships & Training</h2>
+    <button class="scroll-btn left" onclick="scrollLeft('timeline-cards-internship')">&#10094;</button>
+    <div id="timeline-cards-internship" class="timeline-cards">
+      <div class="timeline-card">
+  <img src="MADHUSHREE B.M_page-0001 (1).jpg" alt="InternzLearn Internship Certificate">
+
+  <div class="timeline-info">
+    <h3>Internship – Python Development</h3><br>
+    <p><strong>Company:</strong> InternzLearn</p><br>
+    <p><strong>Duration:</strong> 05-11-2025 to 05-12-2025</p><br>
+    <p>Successfully completed Python projects and contributed to real-time tasks.</p>
+  </div>
+</div>
+<div class="timeline-card">
+  <img src="MADHUSHREE.jpg" alt="Training Certificate">
+
+  <div class="timeline-info">
+    <h3>Python Training Completion</h3><br>
+    <p><strong>Organization:</strong> InternzLearn</p><br>
+    <p><strong>Duration:</strong> 05-10-2025 to 05-11-2025</p><br>
+    <p>Successfully completed structured Python training and demonstrated enthusiasm and consistent learning.</p>
+  </div>
+</div>
+
+
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('timeline-cards-internship')">&#10095;</button>
+  </div>
+</div>
+
+<!-- Certifications -->
+<div id="certification-popup" class="timeline-popup">
+  <div class="timeline-content">
+    <span class="close-btn" onclick="closeCertification()">&times;</span>
+    <h2>Certifications</h2>
+    <button class="scroll-btn left" onclick="scrollLeft('timeline-cards-certification')">&#10094;</button>
+    <div id="timeline-cards-certification" class="timeline-cards">
+      <div class="timeline-card">
+  <img src="Programming in Java_page-0001.jpg" alt="NPTEL Java Certificate">
+
+  <div class="timeline-info">
+    <h3>Programming in Java – NPTEL (Elite)</h3>
+    <p>Platform: NPTEL (IIT Kharagpur)</p><br>
+    <p>Completed a 12-week certified course in Java with an overall score of 77%.</p><br>
+    <p>Achievement: Top 5% performer (Elite Category)</p>
+  </div>
+</div>
+
+      <div class="timeline-card">
+  <img src="EzKFRQ2oEA87PPjsL_ovyvuqqNRQKBjNxbj_ZuuN5NxpbftTtjwwu_1750206642432_completion_certificate_page-0001.jpg" alt="Accenture Job Simulation Certificate">
+  
+  <div class="timeline-info">
+    <h3>Accenture Technology Apprenticeship – Job Simulation</h3>
+    <p>Platform: Forage (Accenture Virtual Internship)</p><br>
+    <p>Completed tasks on understanding the role and transforming processes during this job simulation program.</p><br>
+    <p>Completion Date: June 18, 2025</p>
+  </div>
+</div>
+
+<div class="timeline-card">
+  <img src="Tata_Cruible_Prelims_Level1_page-0001.jpg" alt="Tata Crucible Campus Quiz Certificate">
+  
+  <div class="timeline-info">
+    <h3>Tata Crucible Campus Quiz 2025 – Prelims Level 1</h3>
+    <p>Platform: Internshala</p><br>
+    <p>Participated in the national-level quiz competition demonstrating enthusiasm, effort, and commitment.</p><br>
+    <p>Date: 12th November 2025</p>
+  </div>
+</div>
+<div class="timeline-card">
+  <img src="WhatsApp Image 2025-12-11 at 5.18.08 PM.jpeg" alt="Oracle Certified Professional Certificate">
+  
+  <div class="timeline-info">
+    <h3>Oracle Certified Professional – OCI 2025</h3>
+    <p>Oracle Cloud Infrastructure 2025 Certified Generative AI Professional</p><br>
+    <p>Provided by: Oracle University</p><br>
+    <p>Date: September 29, 2025</p>
+  </div>
+</div>
+
+
+
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('timeline-cards-certification')">&#10095;</button>
+  </div>
+</div>
+
+<!-- Publications & Patent -->
+<div id="publication-popup" class="timeline-popup">
+  <div class="timeline-content">
+    <span class="close-btn" onclick="closePublication()">&times;</span>
+    <h2>Research Paper Publications</h2>
+    <button class="scroll-btn left" onclick="scrollLeft('timeline-cards-publication')">&#10094;</button>
+    <div id="timeline-cards-publication" class="timeline-cards">
+      <div class="timeline-card">
+        <img src="JAAFR 501482_Certificate_removed (1)_page-0001.jpg" alt="Research Paper 1">
+        <div class="timeline-info">
+        <h3>Research Paper Publication</h3><br>
+        <p><strong>Published in:</strong> JOURNAL OF ADVANCE AND FUTURE RESEARCH (JAAFR)</p><br>
+        <p><strong>Year:</strong> 2025</p><br>
+        <p><strong>Paper Title:</strong> AI-Powered Student Performance Evaluation Using Generative AI, LLM, and RAG on Oracle Cloud Infrastructure</p><br>
+        <p><strong>Paper ID:</strong> JAAFR2511430</p><br>
+        <p><strong>Impact Factor:</strong> 8.57 (Google Scholar)</p><br>
+    </div>
+    </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('timeline-cards-publication')">&#10095;</button>
+  </div>
+</div>
+<section id="skills" class="skills-section">
+  <h2 class="section-title">My <span>Skills</span></h2>
+  <p class="section-subtitle">Technologies I've learned and worked with.</p>
+
+  <div class="skills-container">
+
+    <div class="skill-card">
+      <img src="html.jpg" alt="HTML">
+      <p>HTML5</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="css.jpg" alt="CSS">
+      <p>CSS</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="java.jpg" alt="Java">
+      <p>Java</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="c.png" alt="C">
+      <p>C Language</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="python.jpg" alt="Python">
+      <p>Python</p>
+    </div>
+
+  </div>
+</section>
+<section id="projects" class="projects-section">
+  <h2 class="section-title">Featured <span>Projects</span></h2>
+  <p class="section-subtitle">A showcase of my major development and engineering work.</p>
+
+  <div class="projects-container">
+
+    <!-- Project 1 -->
+    <div class="project-card">
+      <img src="WhatsApp Image 2025-12-11 at 5.50.00 PM.jpeg" alt="AI Diary App" class="project-img">
+      <div class="project-content">
+        <h3>Music Player Using Python</h3>
+        <p>A simple Python-based music player with controls for playing, pausing, and managing audio tracks.</p>
+
+        <div class="tags">
+  <span>Python</span>
+  <span>Tkinter</span>
+  <span>Pygame</span>
+</div>
+<div class="project-buttons">
+          <a href="https://github.com/MADHUSHREEBM/Music-Player-using-Python.git" class="btn github">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <img src="profile.png" alt="profile-card" class="project-img">
+      <div class="project-content">
+        <h3>Profile Card</h3>
+        <p>A clean and minimal profile card showcasing my basic details and social links.</p>
+
+        <div class="tags">
+          <span>HTML</span>
+          <span>CSS</span>
+        </div>
+
+        <div class="project-buttons">
+          <a href="https://github.com/MADHUSHREEBM/htmlcss1.git" class="btn github">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <img src="counter.png" alt="counter app" class="project-img">
+      <div class="project-content">
+        <h3>Counter App</h3>
+        <p>A simple counter application that allows users to increase, decrease, and reset values with a clean UI.</p>
+
+        <div class="tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+
+        <div class="project-buttons">
+          <a href="https://github.com/MADHUSHREEBM/project-5.git" class="btn github">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+    <section id="contact" class="contact-section">
+
+  <h1 class="contact-title">Get in <span>Touch</span></h1>
+  <p class="contact-subtitle">I'm happy to connect for project discussions, internships, or career opportunities.</p>
+
+  <div class="contact-container">
+
+    <!-- LEFT SIDE DETAILS -->
+    <div class="contact-left">
+      <p>
+       Feel free to contact me using the details below. I'm always happy to connect!
+      </p>
+
+      <div class="contact-info">
+        <p><i class="icon">📧</i> madhushreebm06@gmail.com</p>
+        <p><i class="icon">📞</i> +91 9353146243</p>
+        <p><i class="icon">📍</i> Mandya, India</p>
+      </div>
+
+      <!-- SOCIAL ICONS -->
+      <div class="social-icons">
+  <a href="https://github.com/MADHUSHREEBM" target="_blank">
+    <img src="github.jpg" alt="GitHub">
+  </a>
+
+  <a href="https://www.linkedin.com/in/madhushree-b-m-42117b314" target="_blank">
+    <img src="linkedin.jpg" alt="LinkedIn">
+  </a>
+
+  <a href="https://www.instagram.com/madhushree_bm_23" target="_blank">
+    <img src="insta.jpg" alt="Instagram">
+  </a>
+</div>
+
+    </div>
+
+    <!-- RIGHT SIDE FORM -->
+    <div class="contact-right">
+
+      <form class="contact-form">
+
+        <label>Name</label>
+        <input type="text" placeholder="Your Name" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="Your Email" required>
+
+        <label>Message</label>
+        <textarea placeholder="Your Message" rows="6" required></textarea>
+
+        <button type="submit" class="send-btn">Send Message</button>
+
+      </form>
+
+    </div>
+
+  </div>
+</section>
+
+
+<script src="script.js"></script>
+<!-- Dark Mode Toggle -->
+<button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle Dark Mode">
+  🌙
+</button>
+
+</body>
+</html>
